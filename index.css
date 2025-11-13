@@ -1,0 +1,66 @@
+body {
+    background-color: #f1ece3;
+    overflow-x: hidden;
+}
+
+.bg-body-tertiary {
+    background-color: #f1ece3 !important;
+}
+
+.imageCon {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    background-image: url(/brooke-lark-kXQ3J7_2fpc-unsplash.jpg);
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    /* background-position: center; */
+    min-height: 500px;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    color: #272d1d;
+}
+
+.mainSection {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.allRecepies {
+    background-color: green;
+    height: 400px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 370px) {
+    .mainSection {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+/* footer {
+    bottom: 0;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #272d1d; */
+/* display: flex;
+    justify-content: center;
+    bottom: 0; */
+/* align-items: flex-end; */
