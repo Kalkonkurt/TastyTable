@@ -1,5 +1,5 @@
 const loadRecipe = async () => {
-    const response = await fetch('https://dummyjson.com/recipes/1')
+    const response = await fetch('https://dummyjson.com/recipes/3')
     const recipe = await response.json()
 
     // image
@@ -8,17 +8,46 @@ const loadRecipe = async () => {
     mainImage.alt = recipe.title
 
     // title
-    let name = document.querySelector('.recipe-card h2')
-    name.textContent = recipe.name
+    setRecipeDetail('.recipe-card h2', recipe.name)
+
     // prep minutes
-    let prepMinutes = document.querySelector('.prep-minutes')
-    prepMinutes.textContent = recipe.prepTimeMinutes
+    setRecipeDetail('.prep-minutes', recipe.prepTimeMinutes)
+
     // cook minutes
-    let cookMinutes = document.querySelector('.cook-minutes')
-    cookMinutes.textContent = recipe.cookTimeMinutes
+
+    setRecipeDetail('.cook-minutes', recipe.cookTimeMinutes)
+
     // servings
-    let servings = document.querySelector('.servings')
-    servings.textContent = recipe.servings
+    setRecipeDetail('.servings', recipe.servings)
+
+    // ingredients OLD
+    // let ingredientsContainer = document.querySelector('.ingredients')
+    // recipe.ingredients.forEach((ingredient) => {
+    //     const newLi = document.createElement('li')
+    //     newLi.append(ingredient)
+    //     ingredientsContainer.append(newLi)
+    // })
+
+    let ingredientsContainer = document.querySelector('.ingredients')
+    let instructionsContainer = document.querySelector('.instructions')
+
+    //ingredients
+    setRecipeText(recipe.ingredients, ingredientsContainer)
+
+    //instructions
+    setRecipeText(recipe.instructions, instructionsContainer)
+}
+
+const setRecipeDetail = function (className, n) {
+    document.querySelector(className).textContent = n
+}
+
+const setRecipeText = function (arr, container) {
+    arr.forEach((element) => {
+        const newLi = document.createElement('li')
+        newLi.append(element)
+        container.append(newLi)
+    })
 }
 
 loadRecipe()
