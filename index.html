@@ -1,128 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="index.css" />
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"
-        ></script>
-        <title>Tasty Table</title>
-    </head>
-    <body class="main-color">
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img
-                        src="clay-pot-1-svgrepo-com.svg"
-                        alt="Bootstrap"
-                        width="30"
-                        height="24"
-                    />
-                </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div
-                    class="collapse navbar-collapse"
-                    id="navbarSupportedContent"
-                >
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <!--ändra stavning-->
-                            <a
-                                class="nav-link active"
-                                aria-current="page"
-                                href="#"
-                                >All recipies</a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Random recepie</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input
-                            class="form-control me-2"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                        />
-                        <button class="btn btn-outline-success" type="submit">
-                            Search
-                        </button>
-                    </form>
-                </div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <title>Tasty Table</title>
+</head>
+
+<body class="main-color">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="clay-pot-1-svgrepo-com.svg" alt="Bootstrap" width="30" height="24" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">All recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Random recipe</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
             </div>
-        </nav>
-        <main class="mainContainer">
-            <!--Background image-->
-            <div class="imageCon">
-                <h1>Tasty Table</h1>
-            </div>
-            <!--All recepies-->
-            <section class="mainSection container">
-                <div class="allRecepies">
-                    <p>1</p>
-                </div>
-                <div class="allRecepies">
-                    <p>2</p>
-                </div>
-                <div class="allRecepies">
-                    <p>3</p>
-                </div>
-                <div class="allRecepies">
-                    <p>4</p>
-                </div>
-                <div class="allRecepies">
-                    <p>5</p>
-                </div>
-                <div class="allRecepies">
-                    <p>6</p>
-                </div>
-                <div class="allRecepies">
-                    <p>7</p>
-                </div>
-                <div class="allRecepies">
-                    <p>8</p>
-                </div>
-                <div class="allRecepies">
-                    <p>9</p>
-                </div>
-                <div class="allRecepies">
-                    <p>10</p>
-                </div>
-                <div class="allRecepies">
-                    <p>11</p>
-                </div>
-                <div class="allRecepies">
-                    <p>12</p>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p id="footerText">
-                © 2025 Tasty Table — Created with love and good food in mind.
-            </p>
-        </footer>
-        <!--Script link-->
-        <script src="index.js"></script>
-    </body>
+        </div>
+    </nav>
+    <main class="mainContainer">
+        <!--Background image-->
+        <div class="imageCon">
+            <h1>Tasty Table</h1>
+        </div>
+        <!--All recepies (ändrat namn på id för section pga id och class var samma)-->
+        <section id="mainSection" class="mainSection container">
+            <!-- Här inne ska det visas recept -->
+        </section>
+    </main>
+    <footer>
+        <p id="footerText">
+            © 2025 Tasty Table — Created with love and good food in mind.
+        </p>
+    </footer>
+    <!--Script link-->
+    <script src="index.js"></script>
+</body>
+
 </html>
