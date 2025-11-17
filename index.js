@@ -18,10 +18,12 @@ function renderRecipes(recipes) {
         const card = document.createElement('div')
         card.className = 'recipe'
         card.innerHTML = `
-        <img
-            src="${recipe.image}"
-            alt="test"
-        />
+        <a href="http://127.0.0.1:5500/recipe.html?id=${recipe.id}">
+            <img
+                src="${recipe.image}"
+                alt="test"
+            />
+        </a>
         <div class="content">
             <h2>${recipe.name}</h2>
             <p>Preparation time: <b>${recipe.prepTimeMinutes} min</b></p>

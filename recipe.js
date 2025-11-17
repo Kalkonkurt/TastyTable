@@ -1,14 +1,35 @@
+// const loadRecipe = async () => {
+//     try {
+//         const params = new URLSearchParams(window.location.search)
+//         const recipeId = params.get('id')
+//         const response = await fetch(
+//             `https://dummyjson.com/recipes/${recipeId}`
+//         )
+//         const data = await response.json()
+//         renderRecipe(data)
+//     } catch (e) {
+//         console.error('Kunde inte hitta receptet', error)
+//     }
+// }
+//Hårdkodad fetch
 const loadRecipe = async () => {
-    const response = await fetch('https://dummyjson.com/recipes/3')
-    const recipe = await response.json()
+    try {
+        const response = await fetch('https://dummyjson.com/recipes/3')
+        const data = await response.json()
+        renderRecipe(data)
+    } catch (e) {
+        console.error('Kunde inte hitta receptet', error)
+    }
+}
 
+const renderRecipe = function (recipe) {
     // image
     let mainImage = document.querySelector('.recipe-image')
     mainImage.src = recipe.image
     mainImage.alt = recipe.title
 
     // title
-    setRecipeDetail('.recipe-card h2', recipe.name)
+    setRecipeDetail('.mainContainer h2', recipe.name)
 
     // prep minutes
     setRecipeDetail('.prep-minutes', recipe.prepTimeMinutes)
