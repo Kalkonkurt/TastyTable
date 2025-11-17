@@ -136,7 +136,7 @@ footer {
     .recipe-instructions {
         display: flex;
         flex-direction: column;
-        padding: 0 1rem;
+        padding: 0 1rem 2rem;
     }
     .recipe-instructions h3 {
         margin-top: 0;
