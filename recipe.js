@@ -41,7 +41,7 @@ const renderRecipe = function (recipe) {
     // servings
     setRecipeDetail('.servings', recipe.servings)
 
-    // ingredients OLD
+    // // ingredients OLD
     // let ingredientsContainer = document.querySelector('.ingredients')
     // recipe.ingredients.forEach((ingredient) => {
     //     const newLi = document.createElement('li')
