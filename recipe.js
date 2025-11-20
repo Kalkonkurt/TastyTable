@@ -1,26 +1,26 @@
-// const loadRecipe = async () => {
-//     try {
-//         const params = new URLSearchParams(window.location.search)
-//         const recipeId = params.get('id')
-//         const response = await fetch(
-//             `https://dummyjson.com/recipes/${recipeId}`
-//         )
-//         const data = await response.json()
-//         renderRecipe(data)
-//     } catch (e) {
-//         console.error('Kunde inte hitta receptet', error)
-//     }
-// }
-//Hårdkodad fetch
 const loadRecipe = async () => {
     try {
-        const response = await fetch('https://dummyjson.com/recipes/3')
+        const params = new URLSearchParams(window.location.search)
+        const recipeId = params.get('id')
+        const response = await fetch(
+            `https://dummyjson.com/recipes/${recipeId}`
+        )
         const data = await response.json()
         renderRecipe(data)
     } catch (e) {
         console.error('Kunde inte hitta receptet', error)
     }
 }
+//Hårdkodad fetch
+// const loadRecipe = async () => {
+//     try {
+//         const response = await fetch('https://dummyjson.com/recipes/3')
+//         const data = await response.json()
+//         renderRecipe(data)
+//     } catch (e) {
+//         console.error('Kunde inte hitta receptet', error)
+//     }
+// }
 
 const renderRecipe = function (recipe) {
     // image

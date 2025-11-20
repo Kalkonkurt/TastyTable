@@ -172,7 +172,7 @@ input[type='submit'] {
     margin: 1rem auto;
 }
 
-@media (min-width: 478px) and (max-width: 768px) {
+@media (max-width: 478px) and (max-width: 768px) {
     .spacer {
         height: 0.5rem;
         box-shadow: 0 0 10px -1px #272d1d;
