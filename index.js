@@ -30,10 +30,32 @@ function renderRecipes(recipes) {
             <p>Cooking time: <b>${recipe.cookTimeMinutes} min</b></p>
             <div class="btn-container">
                 <a class="viewRecipe" href="#">View recept</a>
-                <button>Delete</button>
+                <button class="deleteBtn">Delete</button>
             </div>
         </div>
       `
+        const deleteBtn = card.querySelector('.deleteBtn')
+
+        deleteBtn.addEventListener('click', async () => {
+            try {
+                if (!confirm('Are you sure you want to delete this product?'))
+                    return
+
+                const res = await fetch(
+                    `https://dummyjson.com/recipes/${recipe.id}`,
+                    {
+                        method: 'DELETE'
+                    }
+                )
+                const result = await res.json()
+                console.log('Deleted:', result)
+                alert(`🗑️ Deleted: ${result.name}`)
+                card.remove()
+            } catch (err) {
+                console.error('Kunde inte radera recept:', err)
+            }
+        })
+
         container.appendChild(card)
     })
 }
