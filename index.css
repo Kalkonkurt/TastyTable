@@ -147,6 +147,23 @@ footer {
 .ingredients {
     margin-bottom: 2rem;
 }
+/*Comment Section*/
+.comment-section {
+    /* border: 1px solid red; */
+    margin: 1rem;
+    text-align: center;
+}
+
+.user-comment {
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.464);
+    box-shadow: 5px 4px 15px -1px #272d1d26;
+    margin: 0;
+}
+
+.user-comment p {
+    margin: 0;
+}
 
 /*FORMULÄR*/
 form {
@@ -173,7 +190,7 @@ input[type='submit'] {
     margin: 1rem auto;
 }
 /*Tablet*/
-@media (min-width: 478px) and (max-width: 768px) {
+@media (min-width: 478px) {
     .spacer {
         height: 0.5rem;
         box-shadow: 0 0 10px -1px #272d1d;
@@ -243,7 +260,7 @@ input[type='submit'] {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        width: 60%;
+        width: 70%;
         margin: 1rem auto;
         box-shadow: 5px 4px 15px -1px #272d1d;
     }
@@ -272,6 +289,12 @@ input[type='submit'] {
     .recipe-instructions ol {
         padding-left: 0;
         margin-left: 0;
+    }
+    .ingredient-section {
+        margin-left: 1rem;
+    }
+    .instruction-section {
+        margin-left: 1rem;
     }
 }
 

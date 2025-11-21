@@ -11,6 +11,7 @@
 //         console.error('Kunde inte hitta receptet', error)
 //     }
 // }
+
 //Hårdkodad fetch
 const loadRecipe = async () => {
     try {
@@ -35,7 +36,6 @@ const renderRecipe = function (recipe) {
     setRecipeDetail('.prep-minutes', recipe.prepTimeMinutes)
 
     // cook minutes
-
     setRecipeDetail('.cook-minutes', recipe.cookTimeMinutes)
 
     // servings
@@ -72,6 +72,30 @@ const setRecipeText = function (arr, container) {
 }
 
 loadRecipe()
+
+/*fetch av kommentarer*/
+async function fetchComments() {
+    const result = await fetch('https://dummyjson.com/comments/post/212')
+    const data = await result.json()
+    const comment = data.comments
+    displayComments(comment[0])
+    // displayComments()
+}
+
+function displayComments(commentData) {
+    const container = document.querySelector('.comment-section')
+    container.innerHTML = ''
+    const comment = document.createElement('div')
+    comment.className = 'user-comment'
+    comment.innerHTML = `
+    <strong>${commentData.user.username}</strong>
+    <p>${commentData.body}</p>
+    `
+
+    container.appendChild(comment)
+}
+
+fetchComments()
 
 /*Typ sparaknapp för att localStorage texten i formuläret*/
 
