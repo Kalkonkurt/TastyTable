@@ -158,13 +158,17 @@ footer {
     border-radius: 0.5rem;
     background-color: rgba(255, 255, 255, 0.464);
     box-shadow: 5px 4px 15px -1px #272d1d26;
-    margin: 0 auto;
+    margin: 1rem auto;
     width: fit-content;
     padding: 0.2rem 1rem;
 }
 
 .user-comment p {
     margin: 0;
+}
+
+.user-comment strong {
+    font-size: 1.1rem;
 }
 
 /*FORMULÄR*/
@@ -174,7 +178,7 @@ form {
 }
 
 form fieldset {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 input,

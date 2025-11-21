@@ -75,24 +75,38 @@ loadRecipe()
 
 /*fetch av kommentarer*/
 async function fetchComments() {
-    const result = await fetch('https://dummyjson.com/comments/post/212')
+    const result = await fetch('https://dummyjson.com/comments?limit=2')
     const data = await result.json()
+
+    console.log(data)
     const comment = data.comments
-    displayComments(comment[0])
-    // displayComments()
+    const container = document.querySelector('.comment-section')
+
+    displayAllComments(comment, container)
 }
 
-/*Display av en kommentar*/
-// function displayComments(commentData) {
-//     const container = document.querySelector('.comment-section')
-//     const comment = document.createElement('div')
-//     comment.className = 'user-comment'
-//     comment.innerHTML = `
-//     <strong>${commentData.user.username}</strong>
-//     <p>${commentData.body}</p>
-//     `
-//     container.appendChild(comment)
-// }
+function displayAllComments(allComments, container) {
+    // töm html containern på alla kommentarer
+
+    container.innerHTML = ''
+    allComments.forEach((comment) => {
+        addCommentCard(comment, container)
+    })
+}
+
+// kör din fetch och spara datan
+// kalla på displayAllComments(sparadeDatan, kont)
+
+function addCommentCard(commentData, container) {
+    const comment = document.createElement('div')
+    comment.className = 'user-comment'
+    comment.innerHTML = `
+    <strong>${commentData.user.username}</strong>
+    <p>${commentData.body}</p>
+    `
+    // populera html containern med en kommentar
+    container.appendChild(comment)
+}
 
 /*Display av input från formulär*/
 const form = document.querySelector('.comment-form')
@@ -109,8 +123,12 @@ form.addEventListener('submit', async (e) => {
             userId: 5
         })
     })
+    const data = await res.json()
+
+    const container = document.querySelector('.comment-section')
+
     /*Funktion som displayar texten och username*/
-    displayComment(res.username, res.body, res.id)
+    addCommentCard(data, container)
 })
 
 fetchComments()
