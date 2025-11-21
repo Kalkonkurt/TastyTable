@@ -158,7 +158,9 @@ footer {
     border-radius: 0.5rem;
     background-color: rgba(255, 255, 255, 0.464);
     box-shadow: 5px 4px 15px -1px #272d1d26;
-    margin: 0;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 0.2rem 1rem;
 }
 
 .user-comment p {

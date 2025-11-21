@@ -82,18 +82,36 @@ async function fetchComments() {
     // displayComments()
 }
 
-function displayComments(commentData) {
-    const container = document.querySelector('.comment-section')
-    container.innerHTML = ''
-    const comment = document.createElement('div')
-    comment.className = 'user-comment'
-    comment.innerHTML = `
-    <strong>${commentData.user.username}</strong>
-    <p>${commentData.body}</p>
-    `
+/*Display av en kommentar*/
+// function displayComments(commentData) {
+//     const container = document.querySelector('.comment-section')
+//     const comment = document.createElement('div')
+//     comment.className = 'user-comment'
+//     comment.innerHTML = `
+//     <strong>${commentData.user.username}</strong>
+//     <p>${commentData.body}</p>
+//     `
+//     container.appendChild(comment)
+// }
 
-    container.appendChild(comment)
-}
+/*Display av input från formulär*/
+const form = document.querySelector('.comment-form')
+form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    const text = document.getElementById('comment').value
+
+    const res = await fetch('https://dummyjson.com/comments/add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            body: text,
+            postId: 3,
+            userId: 5
+        })
+    })
+    /*Funktion som displayar texten och username*/
+    displayComment(res.username, res.body, res.id)
+})
 
 fetchComments()
 
