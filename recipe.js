@@ -133,9 +133,15 @@ form.addEventListener('submit', async (e) => {
 
 fetchComments()
 
-/*Typ sparaknapp för att localStorage texten i formuläret*/
+/*Local Storage */
+const textarea = document.getElementById('comment')
+const commentForm = document.getElementById('comment-form')
 
-// document.getElementbyId('save').addEventListner('click', function () {
-//     let comment = document.getElementById('comment').value
-//     localStorage.setItem('comment', comment)
-// })
+textarea.value = localStorage.getItem('textDraft') || ''
+textarea.addEventListener('input', () => {
+    localStorage.setItem('textDraft', textarea.value)
+})
+commentForm.addEventListener('submit', () => {
+    localStorage.removeItem('textDraft')
+    textarea.value = ''
+})
