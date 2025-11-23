@@ -1,27 +1,28 @@
 //Loader
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
+    const minDisplayTime = 500
+    const loadTime = Date.now()
+
+    // const timeElapsed = Date.now() - loadTime
+    // if (timeElapsed < minDisplayTime) {
+    //     setTimeout(hideLoader, minDisplayTime - timeElapsed)
+    // } else {
+    //     hideLoader()
+    // }
+})
+
+function hideLoader() {
     const loader = document.getElementById('loading-viewport')
     const content = document.getElementById('website-content')
 
     content.style.display = 'none'
 
-    const minDisplayTime = 500
-    const loadTime = Date.now()
-
-    function hideLoader() {
-        loader.style.opacity = 0
-        loader.addEventListener('transitionend', () => {
-            loader.style.display = 'none'
-            content.style.display = 'block'
-        })
-    }
-    const timeElapsed = Date.now() - loadTime
-    if (timeElapsed < minDisplayTime) {
-        setTimeout(hideLoader, minDisplayTime - timeElapsed)
-    } else {
-        hideLoader()
-    }
-})
+    loader.style.opacity = 0
+    loader.addEventListener('transitionend', () => {
+        loader.style.display = 'none'
+        content.style.display = 'block'
+    })
+}
 
 const loadRecipe = async () => {
     try {
@@ -83,6 +84,8 @@ const renderRecipe = function (recipe) {
 
     //instructions
     setRecipeText(recipe.instructions, instructionsContainer)
+    // Gömmer loadern först när sidan är färdiguppsatt, kallas på inuti renderRecipe
+    hideLoader()
 }
 
 const setRecipeDetail = function (className, n) {
