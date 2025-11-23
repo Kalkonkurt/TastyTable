@@ -1,21 +1,34 @@
-// const loadRecipe = async () => {
-//     try {
-//         const params = new URLSearchParams(window.location.search)
-//         const recipeId = params.get('id')
-//         const response = await fetch(
-//             `https://dummyjson.com/recipes/${recipeId}`
-//         )
-//         const data = await response.json()
-//         renderRecipe(data)
-//     } catch (e) {
-//         console.error('Kunde inte hitta receptet', error)
-//     }
-// }
+//Loader
+document.addEventListener('DOMContentLoaded', function () {
+    const loader = document.getElementById('loading-veiwport')
+    const content = document.getElementById('website-content')
 
-//Hårdkodad fetch
+    content.style.display = 'block'
+
+    const minDisplayTime = 10000
+    const loadTime = data.now()
+
+    function hideLoader() {
+        loader.style.opacity = 0
+        loader.addEventListener('transitioned', () => {
+            loader.style.display = 'none'
+        })
+    }
+    const timeElapsed = Date.now() - loadTime
+    if (timeElapsed < minDisplayTime) {
+        setTimeout(hideLoader, mindisplay - timeElapsed)
+    } else {
+        hideLoader
+    }
+})
+
 const loadRecipe = async () => {
     try {
-        const response = await fetch('https://dummyjson.com/recipes/22')
+        const params = new URLSearchParams(window.location.search)
+        const recipeId = params.get('id')
+        const response = await fetch(
+            `https://dummyjson.com/recipes/${recipeId}`
+        )
         const data = await response.json()
         renderRecipe(data)
     } catch (e) {
@@ -23,6 +36,18 @@ const loadRecipe = async () => {
     }
 }
 
+//Hårdkodad fetch
+// const loadRecipe = async () => {
+//     try {
+//         const response = await fetch('https://dummyjson.com/recipes/22')
+//         const data = await response.json()
+//         renderRecipe(data)
+//     } catch (e) {
+//         console.error('Kunde inte hitta receptet', error)
+//     }
+// }
+
+// Skapar Receptkortet
 const renderRecipe = function (recipe) {
     // image
     let mainImage = document.querySelector('.recipe-image')
@@ -94,7 +119,7 @@ function displayAllComments(allComments, container) {
     })
 }
 
-// kör din fetch och spara datan
+// Kör fetch och sparar data
 // kalla på displayAllComments(sparadeDatan, kont)
 
 function addCommentCard(commentData, container) {

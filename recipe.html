@@ -13,86 +13,91 @@
     <title>Recipe</title>
 </head>
 
-<body class="main-color">
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="clay-pot-1-svgrepo-com.svg" alt="Bootstrap" width="30" height="24" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <!--ändra stavning-->
-                        <a class="nav-link active" aria-current="page" href="#">All recipies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Random recepie</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">
-                        Search
-                    </button>
-                </form>
-            </div>
-        </div>
-    </nav>
-    <main class="mainContainer">
-        <div class="spacer"></div>
-        <button class=returnBtn><a href="index.html">Return</a></button>
-        <div class="recipe-container">
-            <img class="recipe-image" src="" alt="recipe image">
-            <section class="recipe-card">
-                <h2>NAME</h2>
-
-                <div class="recipe-details">
-                    <article>Prep Minutes:
-                        <strong><label class="prep-minutes"></label></strong>
-                    </article>
-                    <article>Cook minutes:
-                        <strong><label class="cook-minutes"></label></strong>
-                    </article>
-                    <article>Servings:
-                        <strong><label class="servings"></label></strong>
-                    </article>
-                </div>
-
-            </section>
-            <div class="recipe-instructions">
-                <section class="ingredient-section">
-                    <h3>Ingredients</h3>
-                    <ul class="ingredients">
+<body>
+    <div id="loading-viewport">
+        <img src="../TastyTable/SpoonLoader.gif" alt="loading">
+    </div>
+    <div id="website-content" style="display:none;">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="clay-pot-1-svgrepo-com.svg" alt="Bootstrap" width="30" height="24" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <!--ändra stavning-->
+                            <a class="nav-link active" aria-current="page" href="#">All recipies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Random recepie</a>
+                        </li>
                     </ul>
-                </section>
-                <section class="instruction-section">
-                    <h3>Instructions</h3>
-                    <ol class="instructions"></ol>
-                </section>
-
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
             </div>
-        </div>
-        <section class="comment-section">
-        </section>
-        <form action="#" class="comment-form" id="comment-form">
-            <fieldset class="form-container">
-                <label for="comment">Did you like this recipe? Tell us!</label>
-                <textarea name="comment" id="comment" rows="7" cols="30"></textarea>
-                <input type="submit" name="submit" id="submit">
-            </fieldset>
-        </form>
-    </main>
-    <footer>
-        <p id="footerText">
-            © 2025 Tasty Table — Created with love and good food in mind.
-        </p>
-    </footer>
+        </nav>
+        <main class="mainContainer">
+            <div class="spacer"></div>
+            <button class=returnBtn><a href="index.html">Return</a></button>
+            <div class="recipe-container">
+                <img class="recipe-image" src="" alt="recipe image">
+                <section class="recipe-card">
+                    <h2>NAME</h2>
+
+                    <div class="recipe-details">
+                        <article>Prep Minutes:
+                            <strong><label class="prep-minutes"></label></strong>
+                        </article>
+                        <article>Cook minutes:
+                            <strong><label class="cook-minutes"></label></strong>
+                        </article>
+                        <article>Servings:
+                            <strong><label class="servings"></label></strong>
+                        </article>
+                    </div>
+
+                </section>
+                <div class="recipe-instructions">
+                    <section class="ingredient-section">
+                        <h3>Ingredients</h3>
+                        <ul class="ingredients">
+                        </ul>
+                    </section>
+                    <section class="instruction-section">
+                        <h3>Instructions</h3>
+                        <ol class="instructions"></ol>
+                    </section>
+
+                </div>
+            </div>
+            <section class="comment-section">
+            </section>
+            <form action="#" class="comment-form" id="comment-form">
+                <fieldset class="form-container">
+                    <label for="comment">Did you like this recipe? Tell us!</label>
+                    <textarea name="comment" id="comment" rows="7" cols="30"></textarea>
+                    <input type="submit" name="submit" id="submit">
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <p id="footerText">
+                © 2025 Tasty Table — Created with love and good food in mind.
+            </p>
+        </footer>
+    </div>
     <!--Script link-->
     <script src="recipe.js"></script>
 </body>
