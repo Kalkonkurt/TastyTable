@@ -92,7 +92,7 @@ footer {
 /* ANNAS E's SIDA */
 
 /*Loader*/
-#loader {
+#loading-viewport {
     position: fixed;
     left: 0;
     top: 0;
@@ -107,7 +107,7 @@ footer {
     transition: opacity 0.5s ease;
 }
 
-#loader img {
+#loading-viewport img {
     width: 80px;
     height: 80px;
 }

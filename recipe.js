@@ -1,24 +1,25 @@
 //Loader
 document.addEventListener('DOMContentLoaded', function () {
-    const loader = document.getElementById('loading-veiwport')
+    const loader = document.getElementById('loading-viewport')
     const content = document.getElementById('website-content')
 
-    content.style.display = 'block'
+    content.style.display = 'none'
 
-    const minDisplayTime = 10000
-    const loadTime = data.now()
+    const minDisplayTime = 500
+    const loadTime = Date.now()
 
     function hideLoader() {
         loader.style.opacity = 0
-        loader.addEventListener('transitioned', () => {
+        loader.addEventListener('transitionend', () => {
             loader.style.display = 'none'
+            content.style.display = 'block'
         })
     }
     const timeElapsed = Date.now() - loadTime
     if (timeElapsed < minDisplayTime) {
-        setTimeout(hideLoader, mindisplay - timeElapsed)
+        setTimeout(hideLoader, minDisplayTime - timeElapsed)
     } else {
-        hideLoader
+        hideLoader()
     }
 })
 
