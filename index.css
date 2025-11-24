@@ -187,8 +187,10 @@ footer {
 
 /*FORMULÄR*/
 form {
-    width: 90%;
+    display: flex;
+    width: 100%;
     margin: 0 auto;
+    justify-content: center;
 }
 
 input,
@@ -202,8 +204,8 @@ textarea {
 }
 
 input[type='submit'] {
-    width: 50%;
-    margin: 1rem auto;
+    width: 30%;
+    margin: 0.5rem auto;
 }
 /*Tablet*/
 @media (min-width: 478px) {
@@ -269,6 +271,7 @@ input[type='submit'] {
         text-decoration: none;
         color: inherit;
     }
+
     .mainContainer h2 {
         font-size: xx-large;
         margin-top: 1rem;
@@ -277,12 +280,12 @@ input[type='submit'] {
     .recipe-container {
         display: flex;
         flex-direction: column;
-        justify-items: center;
-        width: 70%;
-        margin: 1rem auto;
+        width: 40%;
         box-shadow: 5px 4px 15px -1px #272d1d;
+        border: 1px solid blue;
     }
     .recipe-card {
+        border: 1px solid red;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -292,27 +295,7 @@ input[type='submit'] {
         gap: 0.5rem;
         flex-direction: row;
         align-items: center;
-    }
-    .recipe-instructions {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin: 2rem 0;
-        padding: 0 4rem;
-    }
-    .ingredients ul {
-        padding-left: 0;
-        margin-left: 0;
-    }
-
-    .recipe-instructions ol {
-        padding-left: 0;
-        margin-left: 0;
-    }
-    .ingredient-section {
-        margin-left: 1rem;
-    }
-    .instruction-section {
-        margin-left: 1rem;
+        border: 1px solid green;
     }
 }
 
