@@ -39,6 +39,7 @@ h1 {
 }
 
 .recipe {
+    /*ändra borderradius till 0, 0, 1rem, 1rem; */
     border-radius: 10px;
     box-shadow: 5px 4px 15px -1px #272d1d;
 }
@@ -78,17 +79,6 @@ footer {
     }
 }
 
-/* footer {
-    bottom: 0;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #272d1d; */
-/* display: flex;
-    justify-content: center;
-    bottom: 0; */
-/* align-items: flex-end; */
-
 /* ANNAS E's SIDA */
 
 /*Loader*/
@@ -113,15 +103,16 @@ footer {
 }
 
 /*Recipe site*/
-.spacer {
-    height: 0.5rem;
-    box-shadow: 0 0 10px -1px #272d1d;
-    margin-bottom: 2rem;
+.navbar {
+    box-shadow: 0 3px 10px -5px #272d1d;
 }
+
 .returnBtn {
     padding: 0.5rem 1rem;
     display: block;
     margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: 6px;
 }
 .returnBtn a {
     text-decoration: none;
@@ -141,6 +132,7 @@ footer {
     max-width: 1200px;
     margin: 1rem auto;
     box-shadow: 5px 4px 15px -1px #272d1d;
+    border-radius: 0 0 1rem 1rem;
 }
 .recipe-card {
     display: flex;
@@ -225,6 +217,7 @@ input[type='submit'] {
         padding: 0.5rem 1rem;
         margin-left: 1rem;
         margin-right: 1rem;
+        border-radius: 6px;
     }
     .returnBtn a {
         text-decoration: none;
@@ -270,6 +263,7 @@ input[type='submit'] {
     .returnBtn {
         padding: 0.5rem 1rem;
         display: inline-block;
+        border-radius: 6px;
     }
     .returnBtn a {
         text-decoration: none;
