@@ -1,6 +1,6 @@
 body {
     background-color: #f1ece3;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 /* Navbar and header */
 .bg-body-tertiary {
@@ -11,21 +11,21 @@ body {
     display: flex;
     justify-content: left;
     align-items: flex-end;
-    background-image: url(/brooke-lark-kXQ3J7_2fpc-unsplash.jpg);
+    background-image: url(/images/brooke-lark-kXQ3J7_2fpc-unsplash.jpg);
     width: auto;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    /* background-attachment: fixed; */
-    /* background-position: center; */
-    min-height: 500px;
-    margin-bottom: 2rem;
+    min-height: 210px;
+    margin-bottom: 3rem;
+
 }
 
 /* Title */
 h1 {
-    margin-left: 3rem;
-    margin-bottom: 3rem;
+    font-size: 500%;
+    margin-left: 4rem;
+    margin-bottom: 7rem;
     font-weight: bold;
     color: #272d1d;
 }
@@ -58,8 +58,11 @@ h1 {
 .btn-container {
     display: flex;
     justify-content: space-between;
-}
 
+}
+.deleteBtn {
+    border-radius: 5px;
+}
 .viewRecipe {
     color: black;
 }
@@ -71,15 +74,6 @@ footer {
     align-items: center;
     margin-top: 2rem;
 }
-
-@media (min-width: 480px) {
-    .mainSection {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-    }
-}
-
-/* ANNAS E's SIDA */
 
 /*Loader*/
 #loading-viewport {
@@ -201,7 +195,14 @@ input[type='submit'] {
     width: 30%;
 }
 /*Tablet*/
-@media (min-width: 478px) {
+@media (min-width: 768px) {
+    /*all recipes-sidan*/
+    .mainSection {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    /*recipe sidan*/
     .spacer {
         height: 0.5rem;
         box-shadow: 0 0 10px -1px #272d1d;
@@ -249,7 +250,17 @@ input[type='submit'] {
     }
 }
 /*Desktop*/
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+    /*all recipes-sidan*/
+    .mainSection {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    /* Ändrade här */
+    .imageCon {
+        min-height: 310px;
+    }
+    /*recipe sidan*/
     .recipe-container {
         display: flex;
         flex-direction: column;
@@ -274,5 +285,3 @@ input[type='submit'] {
         width: 10%;
     }
 }
-
-/*random recipe*/

@@ -29,7 +29,7 @@ function renderRecipes(recipes) {
             <p>Preparation time: <b>${recipe.prepTimeMinutes} min</b></p>
             <p>Cooking time: <b>${recipe.cookTimeMinutes} min</b></p>
             <div class="btn-container">
-                <a class="viewRecipe" href="#">View recept</a>
+                <a class="viewRecipe" href="http://127.0.0.1:5500/recipe.html?id=${recipe.id}">View recipe</a>
                 <button class="deleteBtn">Delete</button>
             </div>
         </div>

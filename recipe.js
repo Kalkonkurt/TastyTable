@@ -1,15 +1,4 @@
 //Loader
-document.addEventListener('DOMContentLoaded', () => {
-    const minDisplayTime = 500
-    const loadTime = Date.now()
-
-    // const timeElapsed = Date.now() - loadTime
-    // if (timeElapsed < minDisplayTime) {
-    //     setTimeout(hideLoader, minDisplayTime - timeElapsed)
-    // } else {
-    //     hideLoader()
-    // }
-})
 
 function hideLoader() {
     const loader = document.getElementById('loading-viewport')

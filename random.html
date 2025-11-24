@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="index.css" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+        <title>Random recipe</title>
+    </head>
+    <body class="main-color">
+        <div id="loading-viewport">
+            <img src="/images/SpoonLoader.gif" alt="loading" />
+        </div>
+        <div id="website-content" style="display: none">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img
+                            src="./images/clay-pot-1-svgrepo-com.svg"
+                            alt="Bootstrap"
+                            width="30"
+                            height="24"
+                        />
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                    >
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    aria-current="page"
+                                    href="index.html"
+                                    >All recipes</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    id="randomBtn"
+                                    class="nav-link"
+                                    href="random.html"
+                                    >Random recipe</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <main class="mainContainer">
+                <button class="returnBtn">
+                    <a href="index.html">Return</a>
+                </button>
+                <div class="recipe-container">
+                    <!-- <img class="recipe-image" src="" alt="recipe image" />
+                <section class="recipe-card">
+                    <h2>NAME</h2>
+
+                    <div class="recipe-details">
+                        <article>
+                            Prep Minutes:
+                            <strong
+                                ><label class="prep-minutes"></label
+                            ></strong>
+                        </article>
+                        <article>
+                            Cook minutes:
+                            <strong
+                                ><label class="cook-minutes"></label
+                            ></strong>
+                        </article>
+                        <article>
+                            Servings:
+                            <strong><label class="servings"></label></strong>
+                        </article>
+                    </div>
+                </section>
+                <div class="recipe-instructions">
+                    <section class="ingredient-section">
+                        <h3>Ingredients</h3>
+                        <ul class="ingredients"></ul>
+                    </section>
+                    <section class="instruction-section">
+                        <h3>Instructions</h3>
+                        <ol class="instructions"></ol>
+                    </section>
+                </div> -->
+                </div>
+                <section class="comment-section"></section>
+                <form action="#" class="comment-form" id="comment-form">
+                    <fieldset class="form-container">
+                        <label for="comment"
+                            >Did you like this recipe? Tell us!</label
+                        >
+                        <textarea
+                            name="comment"
+                            id="comment"
+                            rows="5"
+                        ></textarea>
+                        <input type="submit" name="submit" id="submit" />
+                    </fieldset>
+                </form>
+            </main>
+            <footer>
+                <p id="footerText">
+                    © 2025 Tasty Table — Created with love and good food in
+                    mind.
+                </p>
+            </footer>
+        </div>
+        <!--Script link-->
+        <script src="random.js"></script>
+    </body>
+</html>
