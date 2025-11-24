@@ -186,26 +186,19 @@ footer {
 }
 
 /*FORMULÄR*/
-form {
+.form-container {
     display: flex;
-    width: 100%;
-    margin: 0 auto;
-    justify-content: center;
-}
-
-input,
-textarea {
-    display: block;
+    flex-direction: column;
+    align-items: center;
 }
 
 textarea {
-    width: 100%;
-    margin: 0.5rem 0;
+    width: 90%;
+    margin: 1rem;
 }
 
 input[type='submit'] {
     width: 30%;
-    margin: 0.5rem auto;
 }
 /*Tablet*/
 @media (min-width: 478px) {
@@ -257,45 +250,29 @@ input[type='submit'] {
 }
 /*Desktop*/
 @media (min-width: 768px) {
-    .spacer {
-        height: 0.5rem;
-        box-shadow: 0 0 10px -1px #272d1d;
-        margin-bottom: 2rem;
-    }
-    .returnBtn {
-        padding: 0.5rem 1rem;
-        display: inline-block;
-        border-radius: 6px;
-    }
-    .returnBtn a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    .mainContainer h2 {
-        font-size: xx-large;
-        margin-top: 1rem;
-        text-align: center;
-    }
     .recipe-container {
         display: flex;
         flex-direction: column;
-        width: 40%;
+        width: 60%;
         box-shadow: 5px 4px 15px -1px #272d1d;
         border: 1px solid blue;
     }
-    .recipe-card {
-        border: 1px solid red;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+
     .recipe-details {
         display: flex;
         gap: 0.5rem;
         flex-direction: row;
         align-items: center;
-        border: 1px solid green;
+    }
+    .recipe-instructions {
+        justify-content: space-evenly;
+    }
+    textarea {
+        width: 30%;
+        margin: 1rem;
+    }
+    input[type='submit'] {
+        width: 10%;
     }
 }
 
