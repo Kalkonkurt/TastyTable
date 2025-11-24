@@ -2,6 +2,7 @@ body {
     background-color: #f1ece3;
     /* overflow-x: hidden; */
 }
+
 /* Navbar and header */
 .bg-body-tertiary {
     background-color: #f1ece3 !important;
@@ -22,12 +23,23 @@ body {
 }
 
 /* Title */
+@font-face {
+    font-family: 'Momo';
+    src: url(/fonts/Momo_Trust_Display/MomoTrustDisplay-Regular.ttf)
+}
+
 h1 {
+    font-family: 'Momo';
     font-size: 500%;
     margin-left: 4rem;
     margin-bottom: 7rem;
     font-weight: bold;
-    color: #272d1d;
+    color: #29550d;
+    text-shadow:
+        -3px -3px 0 #f9df88,
+        -2px -2px 0 #fce1ab,
+        -2px -2px 0 #fce1ab,
+        -2px -2px 0 #fce1ab;
 }
 
 /* All recipes */
@@ -39,8 +51,7 @@ h1 {
 }
 
 .recipe {
-    /*ändra borderradius till 0, 0, 1rem, 1rem; */
-    border-radius: 10px;
+    border-radius: 1rem;
     box-shadow: 5px 4px 15px -1px #272d1d;
 }
 
@@ -48,6 +59,7 @@ h1 {
     width: 100%;
     min-height: 300px;
     object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
 }
 
 .recipe .content {
@@ -60,9 +72,11 @@ h1 {
     justify-content: space-between;
 
 }
+
 .deleteBtn {
     border-radius: 5px;
 }
+
 .viewRecipe {
     color: black;
 }
@@ -108,16 +122,19 @@ footer {
     margin-top: 1rem;
     border-radius: 6px;
 }
+
 .returnBtn a {
     text-decoration: none;
     color: inherit;
 }
+
 .mainContainer h2 {
     font-size: xx-large;
     margin-top: 1rem;
     text-align: center;
     padding: 1rem;
 }
+
 .recipe-container {
     display: flex;
     flex-direction: column;
@@ -126,13 +143,16 @@ footer {
     max-width: 1200px;
     margin: 1rem auto;
     box-shadow: 5px 4px 15px -1px #272d1d;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 1rem;
 }
+
 .recipe-card {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
+
 .recipe-details {
     display: flex;
     gap: 0.5rem;
@@ -140,21 +160,31 @@ footer {
     align-items: center;
     margin-bottom: 1rem;
 }
+
 .recipe-card img {
     width: 100%;
+
 }
+
+.recipe-image {
+    border-radius: 1rem 1rem 0 0;
+}
+
 .recipe-instructions {
     display: flex;
     flex-direction: column;
     padding: 0 1rem 2rem;
 }
+
 .recipe-instructions h3 {
     margin-top: 0;
     margin-bottom: 1rem;
 }
+
 .ingredients {
     margin-bottom: 2rem;
 }
+
 /*Comment Section*/
 .comment-section {
     /* border: 1px solid red; */
@@ -194,8 +224,10 @@ textarea {
 input[type='submit'] {
     width: 30%;
 }
+
 /*Tablet*/
 @media (min-width: 768px) {
+
     /*all recipes-sidan*/
     .mainSection {
         grid-template-columns: 1fr 1fr;
@@ -208,6 +240,7 @@ input[type='submit'] {
         box-shadow: 0 0 10px -1px #272d1d;
         margin-bottom: 2rem;
     }
+
     .returnBtn {
         display: flex;
         padding: 0.5rem 1rem;
@@ -215,15 +248,18 @@ input[type='submit'] {
         margin-right: 1rem;
         border-radius: 6px;
     }
+
     .returnBtn a {
         text-decoration: none;
         color: inherit;
     }
+
     .mainContainer h2 {
         font-size: xx-large;
         margin-top: 1rem;
         text-align: center;
     }
+
     .recipe-container {
         display: flex;
         flex-direction: column;
@@ -232,16 +268,19 @@ input[type='submit'] {
         margin: 1rem auto;
         box-shadow: 5px 4px 15px -1px #272d1d;
     }
+
     .recipe-card {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .recipe-details {
         display: flex;
         gap: 0.5rem;
         align-items: center;
     }
+
     .recipe-instructions {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -249,17 +288,21 @@ input[type='submit'] {
         padding: 0 2rem;
     }
 }
+
 /*Desktop*/
 @media (min-width: 1024px) {
+
     /*all recipes-sidan*/
     .mainSection {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
     }
+
     /* Ändrade här */
     .imageCon {
         min-height: 310px;
     }
+
     /*recipe sidan*/
     .recipe-container {
         display: flex;
@@ -274,13 +317,16 @@ input[type='submit'] {
         flex-direction: row;
         align-items: center;
     }
+
     .recipe-instructions {
         justify-content: space-evenly;
     }
+
     textarea {
         width: 30%;
         margin: 1rem;
     }
+
     input[type='submit'] {
         width: 10%;
     }
