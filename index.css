@@ -255,7 +255,6 @@ input[type='submit'] {
         flex-direction: column;
         width: 40%;
         box-shadow: 5px 4px 15px -1px #272d1d;
-        border: 1px solid blue;
     }
 
     .recipe-details {
